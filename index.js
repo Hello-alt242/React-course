@@ -8,7 +8,7 @@
         return (
             <div>
                 <div>Current Time:</div>
-                <h3>12:05 PM</h3>
+                <h3>{getTime()}</h3>
             </div>
         );
     }
