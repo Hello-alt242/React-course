@@ -12,7 +12,7 @@ const App=function(){
         </label>
         <input id="name" type="text"/>
         <button style={{ backgroundColor: 'blue', color: 'white'}}>
-            {buttonText}
+            {buttonText.text}
         </button>        
   </div>
 };
