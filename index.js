@@ -1,38 +1,54 @@
-<script type="text/babel" data-presets="env,react">
-    function getTime() {
-        return (new Date()).toLocaleTimeString()
-    }
+import React from "react";
+import ReactDOM from "react-dom";
+import faker from 'faker';
 
-    // Creates a functional component
-    const App = () => {
-        return (
-            <div>
-                <div>Current Time:</div>
-                <h3>{getTime()}</h3>
+const App=()=>{
+    return (
+        <div className="ui container comments">
+            <div className="comment">
+                <a href="/" className="avatar">
+                    <img alt="avatar" src={faker.image.avatar()}/>
+                </a>
+                <div className="content">
+                    <a href="/" className="author">
+                        Sam
+                    </a>
+                    <div className="metadata">
+                        <span className="date">Today at 6:00PM</span>
+                    </div>
+                    <div className="text">Nice blog post!</div>
+                </div>
             </div>
-        );
-    }
+            <div className="comment">
+                <a href="/" className="avatar">
+                    <img alt="avatar" src={faker.image.avatar()}/>
+                </a>
+                <div className="content">
+                    <a href="/" className="author">
+                        Sam
+                    </a>
+                    <div className="metadata">
+                        <span className="date">Today at 6:00PM</span>
+                    </div>
+                    <div className="text">Nice blog post!</div>
+                </div>
+            </div>
+            <div className="comment">
+                <a href="/" className="avatar">
+                    <img alt="avatar" src={faker.image.avatar()}/>
+                </a>
+                <div className="content">
+                    <a href="/" className="author">
+                        Sam
+                    </a>
+                    <div className="metadata">
+                        <span className="date">Today at 6:00PM</span>
+                    </div>
+                    <div className="text">Nice blog post!</div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
-    // Renders the App component into a div with id 'root'
-    ReactDOM.render(<App />, document.querySelector('#root'));
-</script>
-
-
-
-
-
-
-
-
-
-<!--The App component above will be rendered into this-->
-<div id="root"></div>
-
-
-<!--No need to change anything after this line!-->
-<!--No need to change anything after this line!-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.0.0/polyfill.min.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-<script src="https://unpkg.com/@babel/preset-env-standalone@7/babel-preset-env.min.js"></script>
-<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+ReactDOM.render(<App />, document.querySelector('#root'));
